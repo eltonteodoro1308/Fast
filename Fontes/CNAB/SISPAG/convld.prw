@@ -8,7 +8,7 @@
 ฑฑบDesc.     ณCONVERSAO DE LINHA DIGITAVEL PARA CODIGO DE BARRAS          บฑฑ
 ฑฑบ          ณ                                                            บฑฑ
 ฑฑฬออออออออออุออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออนฑฑ
-ฑฑบUso       ณ AP8 -                                          บฑฑ
+ฑฑบUso       ณ AP8 -                                                      บฑฑ
 ฑฑศออออออออออฯออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผฑฑ
 ฑฑ Alteracao: Marciane 25/05/06                                           ฑฑฑ
 ฑฑ            Alguns boletos nao vem com o zeros preenchidos a esquerda   ฑฑฑ
@@ -37,9 +37,9 @@
 USER FUNCTION ConvLD()
 SETPRVT("cStr")
 
-cStr := LTRIM(RTRIM(M->E2_CODBAR))
+cStr := LTRIM(RTRIM(M->E2_LINDIG))
 
-IF VALTYPE(M->E2_CODBAR) == NIL .OR. EMPTY(M->E2_CODBAR)
+IF VALTYPE(M->E2_LINDIG) == NIL .OR. EMPTY(M->E2_LINDIG)
 	// Se o Campo estแ em Branco nใo Converte nada.
 	cStr := ""
 ELSE
