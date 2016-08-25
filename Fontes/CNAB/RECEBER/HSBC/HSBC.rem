@@ -1,0 +1,69 @@
+Codigo registro1  1  0"0"                                                         
+Codigo remessa 2  2  0"1"                                                         
+Literal remessa3  9  0"REMESSA"                                                   
+Cod. Servico   10 11 0"01"                                                        
+Literal Servico12 26 0"COBRANCA"                                                  
+Zero           27 27 0"0"                                                         
+Cod. do cedente28 31 0SUBSTR(SEE->EE_AGENCIA,1,4)                                 
+Subconta       32 33 0"55"                                                        
+Conta          34 44 0"03420006499"                                               
+Uso do Banco   45 46 0                                                            
+Nome empresa   47 76 0SubStr(SM0->M0_NOME,1,30)                                   
+Codigo do banco77 79 0"399"                                                       
+Nome do banco  80 94 0"HSBC"                                                      
+Data Gravacao  95 1000Gravadata(dDataBase,.F.)                                    
+Densidade      1011050"01600"                                                     
+Lit.densidade  1061080"BPI"                                                       
+Uso do Banco   1091100                                                            
+Sigla Layout   1111170"LANCV08"                                                   
+Uso do Banco   1183940                                                            
+Num Sequencial 3954000"000001"                                                    
+Cod. registro  1  1  0"1"                                                         
+Cod. inscricao 2  3  0"02"                                                        
+Inscricao      4  17 0"64109499000152"                                            
+               18 18 0"0"                                                         
+Codigo cedente 19 22 0SUBST(SEE->EE_AGENCIA,1,4)                                  
+Subconta       23 24 0"55"                                                        
+Conta          25 35 0"03420006499"                                               
+Uso do banco   36 37 0                                                            
+Documento      38 62 0SE1->E1_IDCNAB                                              
+Nosso numero   63 73 0"00000000000"                                               
+Desconto       74 79 0"000000"                                                    
+Vlr desconto   80 90 2"00000000000"                                               
+Desconto DATA  91 96 0"000000"                                                    
+Vlr Desconto   97 1072"00000000000"                                               
+Carteira       1081080"1"                                                         
+Cod. ocorrencia1091100"01"                                                        
+Seu Numero     1111200SE1->(E1_PREFIXO+ALLTRIM(E1_NUM)+E1_PARCELA)                
+Vencimento     1211260GravaData(SE1->E1_VENCREA,.F.,)                             
+Valor do Titulo1271392STRZERO(INT(ROUND(SE1->E1_SALDO*100,2)),13)                 
+Banco Cobrador 1401420"399"                                                       
+Ag Depositaria 1431470"00000"                                                     
+Especie        1481490"01"                                                        
+Aceite         1501500"N"                                                         
+Data da Emisao 1511560GravaData(SE1->E1_EMISSAO,.F.,)                             
+Instrucao 1    1571580"72"                                                        
+Insrucao 2     1591600"77"                                                        
+Juros Mora     1611730STRZERO(INT(ROUND(ROUND(SE1->E1_VALOR*0.0013,2)*100,2)),13) 
+Uso do banco   1741790                                                            
+Vlr Desconto   1801922STRZERO(0,13)                                               
+Vlr IOF        1932052STRZERO(0,13)                                               
+Multa          2062182STRZERO(0,13)                                               
+Inscrisao      2192200IIF(SA1->A1_PESSOA=="F",01,02)                              
+CNPJ           2212340IIF(SA1->A1_PESSOA=="J",SA1->A1_CGC, "0000"+SA1->A1_CGC)    
+Nome Cliente   2352740SUBST(SA1->A1_NOME,1,40)                                    
+End do Sacado  2753120SUBSTR(SA1->A1_ENDCOB,1,37)                                 
+Nao recebimento3133140"05"                                                        
+Bairro         3153260SUBST(SA1->A1_BAIRROC,1,12)                                 
+CEP Sacado     3273310SUBST(SA1->A1_CEPC,1,5)                                     
+Suf do CEP     3323340SUBST(SA1->A1_CEPC,6)                                       
+Cidade Sacado  3353490SA1->A1_MUNC                                                
+Sigla da UF    3503510SUBSTR(SA1->A1_EST,1,2)                                     
+Sacador/avalist3523900"PAULISTA BUSINESS COMERCIO IMPORTACAO"                     
+Tipo de Bloquei3913910"S"                                                         
+Prz Protesto   3923930"05"                                                        
+Moeda          3943940"9"                                                         
+               3954000INCREMENTA()                                                
+Codigo Registro1  1  0"9"                                                         
+Uso do Banco   2  3940                                                            
+Num Seq        3954000INCREMENTA()                                                
