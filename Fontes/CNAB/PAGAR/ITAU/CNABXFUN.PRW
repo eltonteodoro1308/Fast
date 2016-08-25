@@ -39,7 +39,7 @@ Local aAreaAtu	:= GetArea()
   IF (SA2->A2_BANCO) == "341"
     cAgenc	:= STRZERO(VAL(SA2->A2_AGENCIA),4) // Posicoes : 24/25/26/27/28 +"29-Branco" 
     cCc	:= strzero(val(sa2->a2_numcon),12,0)//12 - 30/31/32/33/34/35/36/37/38/39/40+41+"42-Branco"
-    cDigcc  := SUBSTR(SA2->A2_DIGCC,1,1)
+    cDigcc  := SUBSTR(SA2->A2_DVCTA,1,1)
 
 	cSispag:= "0"+cAgenc+" "+cCc+" "+cDigcc     		
 
@@ -47,7 +47,7 @@ Local aAreaAtu	:= GetArea()
     
     cAgenc	:= STRZERO(VAL(SA2->A2_AGENCIA),5)     
     cCc	:= strzero(val(sa2->a2_numcon),12,0)
-    cDigcc := SUBSTR(SA2->A2_DIGCC,1,1)      
+    cDigcc := SUBSTR(SA2->A2_DVCTA,1,1)      
 
    	cSispag:= cAgenc+" "+cCc+" "+cDigcc   
      EndIf      
