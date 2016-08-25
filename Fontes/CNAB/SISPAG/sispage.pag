@@ -11,7 +11,7 @@ ACompl. Registro0580580SPACE(1)
 AC/C Debitar    0590700STRZERO(VAL(SEE->EE_CONTA),12)                              
 ACompl. Registro0710710SPACE(1)                                                    
 ADAC Ag C/C Deb 0720720SEE->EE_DVCTA                                               
-ANome Empresa   0731020SUBS( SM0->M0_NOME,1,30 )                                   
+ANome Empresa   0731020SUBS( SM0->M0_NOMECOM,1,30 )                                
 ANome Banco     1031320SUBS( SA6->A6_NOME,1,30 )                                   
 ACompl. Registro1331420SPACE(10)                                                   
 ACod Rem/Ret    1431430"1"                                                         
@@ -63,7 +63,7 @@ CCompl. Registro0580580SPACE(1)
 CC/C Debitar    0590700STRZERO(VAL(SEE->EE_CONTA),12)                              
 CCompl. Registro0710710SPACE(1)                                                    
 CDAC            0720720SEE->EE_DVCTA                                               
-CNome Empresa   0731020SUBS( SM0->M0_NOME,1,30 )                                   
+CNome Empresa   0731020SUBS( SM0->M0_NOMECOM,1,30 )                                
 CFinalidade Pgto1031320SPACE(30)                                                   
 CCompl Historico1331420SPACE(10)                                                   
 CEndereco       1431720SUBSTR(SM0->M0_ENDCOB,1,30)                                 
