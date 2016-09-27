@@ -1,0 +1,11 @@
+- Pagar Boleto Fornecor
+- TED
+- DOC
+- PA
+- FINA241 gera bordero com líquido do título
+- Considerar ac´recimo e decréscimo
+
+
+- RECEBER verificar 
+- ajustar posição do campo DV da conta e agencia do cadastro de fornecedor.
+
