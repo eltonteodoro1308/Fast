@@ -113,7 +113,7 @@ GSeu Numero     0740930SE2->E2_IDCNAB
 GData Pgto      0941010GRAVADATA(SE2->E2_VENCREA,.F.,5)                            
 GTipo Moeda     1021040"REA"                                                       
 GCompl. Registro1051190REPL("0",15)                                                
-GValor Pgto     1201342STRZERO(SE2->E2_SALDO*100,15)                               
+GValor Pgto     1201342STRZERO(SE2->(E2_VALOR-E2_DECRESC+E2_ACRESC)*100,15)        
 GNosso Numero   1351490SPACE(15)                                                   
 GCompl. Registro1501540SPACE(5)                                                    
 GData Efet Pgto 1551620REPL("0",8)                                                 
@@ -159,7 +159,7 @@ JValor Titulo   1001142STRZERO(SE2->E2_VALOR*100,15)
 JDescontos      1151292STRZERO(SE2->E2_DECRESC*100,15)                             
 JAcrescimos     1301442STRZERO(SE2->E2_ACRESC*100,15)                              
 JData Pagamento 1451520GRAVADATA(SE2->E2_VENCREA,.F.,5)                            
-JValor Pagamento1531672STRZERO((SE2->E2_VALOR-SE2->E2_DECRESC)*100,15)             
+JValor Pagamento1531672STRZERO(SE2->(E2_VALOR-E2_DECRESC+E2_ACRESC)*100,15)        
 JCompl. Registro1681820STRZERO(0,15)                                               
 JSeu Numero     1832020SE2->E2_IDCNAB                                              
 JCompl. Registro2032150SPACE(13)                                                   
